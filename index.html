@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>التبرع - قرية الشغور</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="village.jpg" alt="قرية الشغور" class="header-img">
+    <h1>التبرع لإصلاح طرق قرية الشغور</h1>
+    <p class="ayah">﴿مَّثَلُ الَّذِينَ يُنفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ...﴾ [البقرة: 261]</p>
+  </header>
+
+  <section class="stats">
+    <p>💰 إجمالي التبرعات: <span id="total">0</span> <span id="currency">ل.ت</span></p>
+    <p>👥 عدد المتبرعين: <span id="donorsCount">0</span></p>
+    <button id="switchCurrency">تبديل العملة</button>
+  </section>
+
+  <section class="donate-form">
+    <h2>أدخل بيانات تبرعك</h2>
+    <input type="text" id="name" placeholder="الاسم">
+    <input type="number" id="amount" placeholder="المبلغ">
+    <input type="text" id="phone" placeholder="رقم الهاتف (اختياري)">
+    <textarea id="message" placeholder="رسالة خاصة (اختياري)"></textarea>
+    <button id="donateBtn">تبرع</button>
+    <p id="thanks" class="thanks"></p>
+  </section>
+
+  <section class="donors">
+    <h2>قائمة المتبرعين</h2>
+    <ul id="donors"></ul>
+  </section>
+
+  <section class="share">
+    <h2>شارك الحملة</h2>
+    <button onclick="shareWhatsApp()">واتساب</button>
+    <button onclick="shareFacebook()">فيسبوك</button>
+    <button onclick="copyLink()">نسخ الرابط</button>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
